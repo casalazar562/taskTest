@@ -22,6 +22,7 @@ return new class extends Migration
                 Task::COMPLETED,
             ])->default(Task::PENDING);
             $table->date('due_date');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
